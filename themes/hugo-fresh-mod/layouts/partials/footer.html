@@ -1,0 +1,30 @@
+{{- $footer       := .Site.Params.footer }}
+{{- $logo         := index $footer "logo" }}
+{{- $productLinks := index $footer "product" }}
+{{- $docLinks     := index $footer "docs" }}
+{{- $blogrollLinks:= index $footer "blogroll" }}
+{{- $socialMedia  := index $footer "socialmedia" }}
+{{- $bulmaLogo    := index $footer "bulmalogo" }}
+<footer class="footer" style="background-color: #FFF">
+  <div class="container">
+    <div class="footer-header">
+<!--       <figure>
+        <div>
+          <img src="/images/logos/nc.svg" style="width:100px;">
+        </div>
+      </figure> -->
+      <div class="columns">
+        {{- range $socialMedia }}
+          <div class="column">
+            <a class="level-item" href="{{ .link }}">
+              <!-- <span class="icon"><i class="fa fa-{{ .icon }}"></i></span> -->
+              <figure class="image">
+              <img src="/images/logos/{{ .icon }}">
+              </figure>
+            </a>
+          </div>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,44 @@
+{{- $section6 := .Site.Params.section6 }}
+{{- $title    := index $section6 "title" }}
+{{- $subtitle := index $section6 "subtitle" }}
+{{- $clients  := index $section6 "clients" }}
+<section class="section is-medium section-secondary" id="section6">
+  <div class="container">
+
+    <div class="title-wrapper has-text-centered">
+      <h2 class="title is-2 light-text is-spaced">{{ $title }}</h2>
+      {{- with $subtitle }}
+      <h3 class="subtitle is-5 light-text">{{ . }}</h3>
+      {{- end }}
+    </div>
+
+    <div class="content-wrapper">
+      <div class="columns is-vcentered">
+        {{- range $clients }}
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image">
+                <img src="{{ printf "/images/illustrations/faces/%s.jpg" (string .img) | relURL }}" alt=""/>
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-5">{{ .name }}</p>
+                  <p class="subtitle is-6">{{ .job }}</p>
+                  <a href="{{ .link }}" target="_blank">Learn More</a>
+                </div>
+              </div>
+<!--               <div class="content">
+                {{ .quote }}
+              </div> -->
+            </div>
+          </div>
+        </div>
+        {{- end }}
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
