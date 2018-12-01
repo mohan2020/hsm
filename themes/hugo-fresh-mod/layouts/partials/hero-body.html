@@ -1,18 +1,19 @@
 {{- $hero       := .Site.Params.hero }}
 {{- $title      := index $hero "title" }}
 {{- $subtitle   := index $hero "subtitle" }}
+{{- $subtitle2   := index $hero "subtitle2" }}
 {{- $buttonText := index $hero "buttontext" }}
 {{- $buttonLink := index $hero "buttonlink" }}
 {{- $image      := index $hero "image" }}
-<div class="hero-body">
+<div class="hero-body" style="background-color: #492b75;">
   <div class="container">
     <div class="columns is-vcentered">
-      <div class="column is-5 is-offset-1 landing-caption">
-        <h1 class="title is-1 is-bold is-spaced">
+      <div class="column is-4 is-offset-1 landing-caption">
+        <h1 class="title is-1 is-bold is-spaced" style="color:aliceblue;">
           {{ $title }}
         </h1>
         {{ with $subtitle }}
-        <h2 class="subtitle is-5 is-muted">
+        <h2 class="subtitle is-5 is-muted" style="color:aliceblue;">
           {{ . }}
         </h2>
         {{ end }}
@@ -22,10 +23,20 @@
           </a>
         </p>
       </div>
-      <div class="column is-5 is-offset-1">
+      <div class="column is-6 is-offset-1">
         <figure class="image">
-          <img src="{{ printf "/images/%s" $image | relURL }}" alt="Description">
+          <!-- <img src="{{ printf "/images/%s" $image | relURL }}" alt="Description"> -->
+          <video width="100%" height="auto" controls>
+            <source src="https://www.dropbox.com/s/qqdvv82sb047562/Penn%20SOI%20-%20Heartsafe%20Motherhood.mp4?raw=1" type="video/mp4">
+            <!-- <source src="movie.ogg" type="video/ogg"> -->
+          Your browser does not support the video tag.
+          </video>
         </figure>
+        {{ with $subtitle2 }}
+        <h2 class="subtitle is-5 is-muted" style="color:aliceblue;">
+          {{ . }}
+        </h2>
+        {{ end }}
       </div>
     </div>
   </div>

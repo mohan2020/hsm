@@ -3,11 +3,11 @@
 {{- $subtitle := index $section1 "subtitle" }}
 {{- $tiles    := index $section1 "tiles" }}
 {{- $tiles2   := index $section1 "tiles2" }}
-<section class="section section-feature-grey is-medium" id="section1">
+<section class="section is-medium" style="background-color: #e7e7e7;"  id="section1">
   <div class="container">
     <div class="title-wrapper has-text-centered">
       <h2 class="title is-2">{{ $title }}</h2>
-      <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
+      <h3 class="subtitle is-5">{{ $subtitle }}</h3>
       <div class="divider is-centered"></div>
     </div>
 
@@ -20,7 +20,7 @@
               <h4>{{ .title }}</h4>
             </div>
             <div class="card-icon">
-                <img src="{{ printf "/images/illustrations/icons/%s.svg" .icon | relURL }}">
+                <img src="{{ printf "/images/illustrations/icons/%s.png" .icon | relURL }}">
             </div>
             <div class="card-text">
                 <p>{{ .text | markdownify }}</p>
@@ -40,7 +40,7 @@
               <h4>{{ .title }}</h4>
             </div>
             <div class="card-icon">
-                <img src="{{ printf "/images/illustrations/icons/%s.svg" .icon | relURL }}">
+                <img src="{{ printf "/images/illustrations/icons/%s.png" .icon | relURL }}">
             </div>
             <div class="card-text">
                 <p>{{ .text | markdownify}}</p>

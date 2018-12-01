@@ -1,35 +1,57 @@
 {{- $section4 := .Site.Params.section4 }}
 {{- $title    := index $section4 "title" }}
 {{- $subtitle := index $section4 "subtitle" }}
-{{- $features := index $section4 "features" }}
-<section class="section is-medium" id="section4">
-  <div class="container">
-    <div class="columns">
-      <div class="column is-centered-tablet-portrait">
-        <h1 class="title section-title">{{ $title }}</h1>
-        <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
-        <div class="divider"></div>
+{{- $tiles    := index $section4 "tiles" }}
+{{- $icon1    := index $section4 "icon1" }}
+{{- $icon2    := index $section4 "icon2" }}
+<section class="section section-feature-grey is-medium" style="background-color: #FFF;" id="section4">
+    <div class="container">
+      <div class="title-wrapper has-text-centered">
+        <h2 class="title is-2" > {{ $title }}</h2>
+        <!-- <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3> -->
+        <div class="divider is-centered"></div>
       </div>
-      <div class="column is-7 mt-60">
-        {{- range $features }}
-        <article class="media icon-box">
-          <figure class="media-left">
-            <p class="image">
-              <img src="{{ printf "/images/illustrations/icons/%s.svg" .icon | relURL }}">
-            </p>
-          </figure>
-          <div class="media-content mt-50">
-            <div class="content">
-              <p>
-                <span class="icon-box-title">{{ .title }}</span>
-
-                <span class="icon-box-text">{{ .text }}</span>
-              </p>
+      <div class="content-wrapper ">
+          <div class="tile is-ancestor">
+            <div class="tile is-6 is-parent">
+              <div class="tile is-child ">
+                <p class="title">Patient Experience</p>
+                <img src="{{ printf "/images/illustrations/icons/%s.png" $icon1 | relURL }}">
+              </div>
+            </div>
+            <div class="tile is-parent">
+              <div class="tile is-child">
+                  <p class="title">Provider Experience</p>
+                  <img src="{{ printf "/images/illustrations/icons/%s.png" $icon2 | relURL }}">
+              </div>
             </div>
           </div>
-        </article>
-        {{- end }}
+          <!-- <div class="tile is-ancestor">
+              {{- range $tiles}}
+            <div class="tile is-3 is-parent">
+              <div class="tile is-child">
+                  <div class="has-text-centered">
+                      <h1>{{ .title }}</h1>
+                    </div>
+                <p>{{ .text | markdownify}}</p>
+              </div>             
+            </div>
+            {{- end }}  -->
+            <div class="columns">
+                {{- range $tiles }}
+                <div class="column is-3">
+                  <div class="feature-card has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
+                    <div class="card-title">
+                      <h4>{{ .title }}</h4><br/>
+                    </div>
+                    <div class="card-text">
+                        <p>{{ .text | markdownify }}</p>
+                    </div>
+                  </div>
+                </div>
+                {{- end }}
+              </div>
+          </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>

@@ -2,56 +2,33 @@
 {{- $title    := index $section3 "title" }}
 {{- $subtitle := index $section3 "subtitle" }}
 {{- $tiles    := index $section3 "tiles" }}
-{{- $tiles2   := index $section3 "tiles2" }}
-<section class="section section-feature-grey is-medium" id="section3">
+<section class="section section-feature-grey is-medium" style="background-color:#a38ebc;" id="section3">
   <div class="container">
     <div class="title-wrapper has-text-centered">
-      <h2 class="title is-2">{{ $title }}</h2>
-      <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
+      <h2 class="title is-2" style="color:aliceblue;"> {{ $title }}</h2>
+      <!-- <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3> -->
       <div class="divider is-centered"></div>
     </div>
 
     <div class="content-wrapper">
-      <div class="columns">
-        {{- range $tiles }}
-        <div class="column is-one-third">
-          <div class="feature-card is-bordered has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
-            <div class="card-title">
-              <h4>{{ .title }}</h4>
+        <div class="tile is-ancestor">
+            <div class="tile is-6 is-parent">
+              <div class="tile is-child box">
+                {{- range $tiles}}
+                <!-- <p class="title">One</p> -->
+                <img src="{{ printf "/images/illustrations/icons/%s.jpg" .icon | relURL }}">
+              </div>
             </div>
-            <div class="card-icon">
-                <img src="{{ printf "/images/illustrations/icons/%s.svg" .icon | relURL }}">
+            <div class="tile is-parent">
+              <div class="tile is-child box">
+                <!-- <p class="title">Three</p> -->
+                <p>{{ .text1 | markdownify }}</p> <br/>
+                <p>{{ .text2 | markdownify }}</p> <br/>
+                <p>{{ .text3 | markdownify }}</p>
+                {{- end }}
+              </div>
             </div>
-            <div class="card-text">
-                <p>{{ .text }}</p>
-            </div>
-<!--             <div class="card-action">
-              <a href="{{ .url }}" class="button btn-align-md accent-btn raised">{{ .buttonText }}</a>
-            </div> -->
           </div>
-        </div>
-        {{- end }}
-      </div>
-      <div class="columns">
-        {{- range $tiles2 }}
-        <div class="column is-one-third">
-          <div class="feature-card is-bordered has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
-            <div class="card-title">
-              <h4>{{ .title }}</h4>
-            </div>
-            <div class="card-icon">
-                <img src="{{ printf "/images/illustrations/icons/%s.svg" .icon | relURL }}">
-            </div>
-            <div class="card-text">
-                <p>{{ .text }}</p>
-            </div>
-<!--             <div class="card-action">
-              <a href="{{ .url }}" class="button btn-align-md accent-btn raised">{{ .buttonText }}</a>
-            </div> -->
-          </div>
-        </div>
-        {{- end }}
-      </div>
     </div>
   </div>
 </section>
