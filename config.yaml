@@ -119,16 +119,19 @@ params:
     features:
     - title: 
       text: 
-      icon: aha
+      icon: aha2
     - title: 
       text: 
-      icon: aheart
+      icon: aheart2
     - title: 
       text: 
-      icon: council
+      icon: council2
     - title: 
       text: 
-      icon: vizient
+      icon: vizient2
+    - title: 
+      text: 
+      icon: pbj
   section3:
     title: The Evidence
     subtitle: Proven. Used at Scale.
@@ -182,7 +185,7 @@ params:
     - link: https://pennmedicine.org
       icon: pennmed.png
     - link: http://www.uphs.upenn.edu/obgyn/
-      icon: pennmedicineobgynlogo.png
+      icon: pennmedicineobgynlogo.svg
     - link: https://healthcareinnovation.upenn.edu/
       icon: chci2.png
     - link: http://waytohealth.org/
