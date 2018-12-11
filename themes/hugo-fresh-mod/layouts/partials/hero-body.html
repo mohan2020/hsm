@@ -5,6 +5,7 @@
 {{- $buttonText := index $hero "buttontext" }}
 {{- $buttonLink := index $hero "buttonlink" }}
 {{- $image      := index $hero "image" }}
+{{- $placeholder := index $hero "placeholder" }}
 <div class="hero-body" style="background-color: #492b75;">
   <div class="container">
     <div class="columns is-vcentered">
@@ -26,7 +27,7 @@
       <div class="column is-6 is-offset-1">
         <figure class="image">
           <!-- <img src="{{ printf "/images/%s" $image | relURL }}" alt="Description"> -->
-          <video width="100%" height="auto" controls>
+          <video width="100%" height="auto" controls poster="/images/illustrations/icons/placeholder.jpg">
             <source src="https://www.dropbox.com/s/qqdvv82sb047562/Penn%20SOI%20-%20Heartsafe%20Motherhood.mp4?raw=1" type="video/mp4">
             <!-- <source src="movie.ogg" type="video/ogg"> -->
           Your browser does not support the video tag.

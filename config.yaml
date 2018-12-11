@@ -18,6 +18,7 @@ params:
     buttonlink: "#section7"
     # Hero video
     image: https://www.dropbox.com/s/qqdvv82sb047562/Penn%20SOI%20-%20Heartsafe%20Motherhood.mp4?raw=1
+    # image placeholder for video (from /images/illustrations/icons/placeholder.png)
     # text below explaing HSM
     subtitle2: Heart Safe Motherhood is an evidence-based program to improve the health outcomes and experience of postpartum women with hypertension
     # Footer logos (from /images/logos/clients/___.svg)
@@ -79,7 +80,7 @@ params:
         url: /
   section1:
     title: Why Heart Safe Motherhood?
-    subtitle: Hypertension is a leading cause of maternal morbidity and mortality.  Heart Safe Motherhood was created to change those statistics.
+    subtitle: Hypertension is a leading cause of maternal morbidity and mortality.  Heart Safe Motherhood was created to improve care for mothers with hypertension after delivery and change those statistics.
     tiles:
     - title: Preventable Death
       icon: person
@@ -92,7 +93,7 @@ params:
       url: /
       buttonText: 
     - title: ACOG Guidelines
-      icon: acogtiming
+      icon: acogtiming_grey
       text: Guidelines recommend monitoring BP at 72 hours and 7-10 days postpartum in at-risk women.
       url: /
       buttonText:
@@ -161,7 +162,7 @@ params:
     buttonLink: "#"
   section6:
     title: The Team
-    subtitle: We’re specialists in patient care, research, and innovation in maternal fetal medicine
+    subtitle: We are Maternal Fetal Medicine specialists with an interest in preeclampsia who care deeply about our patients, research, and innovation before, during, and after pregnancy.
     clients:
     - name: Sindhu Srinivas, MD, MSCE
       quote: 
@@ -173,18 +174,13 @@ params:
       job: Assistant Professor of Clinical Obstetrics and Gynecology. <br/><br/>Co-Founder and Director of Clinical Operations, Heart Safe Motherhood
       img: adihirshbergheadshot
       link: https://www.pennmedicine.org/providers/profile/adi-hirshberg
-    - name: Katy Mahraj, MSI
-      quote: 
-      job: Director of Operations, Penn Medicine Center for Health Care Innovation
-      img: mahraj
-      link: https://healthcareinnovation.upenn.edu/bio/katy-mahraj-msi
   footer:
     # Logo (from /images/logos/___)
     logo: nc.svg
     # Social media links (GitHub, Twitter, etc.). All are optional.
     socialmedia:
     - link: https://pennmedicine.org
-      icon: pennnn.png
+      icon: pennmed.png
     - link: http://www.uphs.upenn.edu/obgyn/
       icon: pennmedicineobgynlogo.png
     - link: https://healthcareinnovation.upenn.edu/

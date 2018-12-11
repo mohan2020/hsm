@@ -16,9 +16,9 @@
       <div class="columns">
         {{- range $socialMedia }}
           <div class="column">
-            <a class="level-item" href="{{ .link }}">
+            <a class="level-item" style="display: table-cell; vertical-align: middle;" href="{{ .link }}">
               <!-- <span class="icon"><i class="fa fa-{{ .icon }}"></i></span> -->
-              <figure class="image">
+              <figure class="image" >
               <img src="/images/logos/{{ .icon }}">
               </figure>
             </a>
