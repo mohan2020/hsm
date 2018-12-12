@@ -2,6 +2,7 @@
 {{- $title    := index $section2 "title" }}
 {{- $subtitle := index $section2 "subtitle" }}
 {{- $features := index $section2 "features" }}
+{{- $features2 := index $section2 "features2" }}
 <section class="section is-medium" id="section2">
   <div class="container">
     <!-- <div class="columns">
@@ -37,9 +38,18 @@
       <div class="divider is-centered"></div> <br/><br/>
     </div>
 
-    <div class="tile is-ancestor">
+    <div class="tile is-ancestor offset-1">
       {{- range $features }}
-      <article class="tile is-parent is-3">
+      <article class="tile is-parent is-4">
+        <figure class="image">
+            <img src="{{ printf "/images/illustrations/icons/%s.png" .icon | relURL }}">
+        </figure>
+      </article>
+      {{- end}}
+    </div>
+    <div class="tile is-ancestor offset-1">
+      {{- range $features2 }}
+      <article class="tile is-parent is-4">
         <figure class="image">
             <img src="{{ printf "/images/illustrations/icons/%s.png" .icon | relURL }}">
         </figure>
